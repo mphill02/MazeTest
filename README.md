@@ -13,6 +13,9 @@ currentCell - reference to the Cell object where you are currently located
 currentCellKey - String reference to where you are currently located. It is in the form “x,y”
 maze - reference to a HashMap that stores Cell objects with key of type String in the form "x,y"
 
+When putting your logic into the proceedToNextCell method, you have to decide on the coordinates for the cell for the robot to go to and put the coordinates into the currentCellKey in the form of "x,y". For example, if you proceedToNextCell method decides to move the robot from to the cell located at 1,3 to the cell located at 1,4 then you would write code like:
+currentCellKey = currentCell.getX() + "," + (currentCell.getY() + 1);
+
 The coordinate system starts with 1 for both the x and y axes.
 
 Modify your run configurations to pass the starting point of your Maze.
